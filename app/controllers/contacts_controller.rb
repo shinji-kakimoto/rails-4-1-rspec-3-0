@@ -69,6 +69,9 @@ class ContactsController < ApplicationController
     end
   end
 
+  def hide_contact
+    redirect_to contacts_url
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
@@ -80,4 +83,5 @@ class ContactsController < ApplicationController
       params.require(:contact).permit(:firstname, :lastname, :email,
         :phones_attributes => [:id, :phone, :phone_type])
     end
+
 end

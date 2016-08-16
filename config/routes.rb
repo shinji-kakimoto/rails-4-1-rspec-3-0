@@ -5,7 +5,13 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
 
-  resources :contacts
+  resources :contacts do
+    resources :phones
+  end
 
   root 'contacts#index'
+  #TODO
+  patch 'hidden_contact' => 'contacts#hide_contact'
+
+
 end
