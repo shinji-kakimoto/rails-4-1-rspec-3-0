@@ -44,6 +44,9 @@ group :development, :test do
   gem "rspec-rails", "~> 3.1.0"
   gem "factory_girl_rails", "~> 4.4.1"
   gem "rails-erd"
+  gem "guard-rspec"
+  gem 'spring-commands-rspec', '~> 1.0.2'
+  gem 'shoulda'
 end
 
 group :test do
@@ -53,4 +56,5 @@ group :test do
   gem "launchy", "~> 2.4.2"
 #  gem "selenium-webdriver", "~> 2.43.0"
   gem 'poltergeist'
+  gem "guard-rspec"
 end

@@ -6,6 +6,10 @@ describe Contact do
     expect(build(:contact)).to be_valid
   end
 
+  # syntax sugar
+  it { should validate_presence_of :firstname }
+  it { is_expected.to validate_presence_of :firstname }
+
   it "has three phone numbers" do
     expect(create(:contact).phones.count).to eq 3
   end

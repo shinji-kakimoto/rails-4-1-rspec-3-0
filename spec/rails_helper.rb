@@ -37,6 +37,11 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+  
+  # faster spec
+  config.run_all_when_everything_filtered = true
+#  config.filter_run focus: ture
+#  config.filter_run_excluding slow: ture
 
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
